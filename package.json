@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev --ignore-watch node_modules src/index.ts",
     "latest": "knex migrate:latest",
     "seed": "knex seed:make",
     "seed-run": "knex seed:run"

@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import connection from '../database/connection'
+import Point from '../interfaces/PointsInterface'
 
 
 class PointsController {
@@ -47,7 +48,7 @@ class PointsController {
             city,
             uf,
             items
-        } = request.body
+        }: Point = request.body
     
         const transaction = await connection.transaction()
     
